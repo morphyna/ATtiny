@@ -23,7 +23,8 @@ Para cargar el sketch dirigete a File>Examples>11.ArduinoISP>ArduinoISP
 
 ![Ruta ubicación sketch ArduinoISP](../img/arduinoISP.png)
 
-para cargar el programa siga los siguientes pasos:
+para cargar el programa siga los estos pasos:
+
 - Configurar la placa: Dirijase a Tools>Board>Arduino AVR Boards>Arduino nano.
 - Verifique el puerto: Conecte el arduino nano al computador por medio del calble USB y verifique que arduino nano aparece conectado a un puerto, por ejemplo COM3. Si no aparece conectado, seleccione el puerto en Tools>Port>COM##. En el caso que no lepermita seleccionar el puerto puede deberse a 2 factores:
     1. Conexión defectuosa: verifique que el cable este bien conectado y la integridad del cable y los puertos.
@@ -38,6 +39,7 @@ El programa debe cargarse sin conectar el Capacitor de 10uF entre Reset y GND, s
 ## Diagramas de Conexión
 
 Para realizar las conexinoes debemos ubicar unos los pines que cumplen la función de comunicación UART.
+
 - MISO
 - MOSI
 - SCK
@@ -47,12 +49,13 @@ Para realizar las conexinoes debemos ubicar unos los pines que cumplen la funci�
 - GND
 
 Las siguentes imagenes muestran donde están estos pines en Arduino nano y ATtiny88 respectivamente.
-![PinOUT Arduino nano](img/nano328.png)
-![PinOUT Arduino nanoATtiny88](img/attiny88.jpg)
+![PinOUT Arduino nano](../img/nano328.png)
+![PinOUT Arduino nanoATtiny88](../img/attiny88.jpg)
 
 ### Conexión del Arduino Nano como ISP
 
 Los piens a usar de nano serán los siguentes:
+
 - PIN13-------SCK
 - PIN12-------MISO
 - PIN11-------MOSI
@@ -62,6 +65,7 @@ Los piens a usar de nano serán los siguentes:
 - PIN7--------LED_PMODE
 
 El pin SS se usara para resetear el ATtiny durante la carga del sketch, además se usarán los pines 9, 8 y 7 para poner indicadores LEDs.
+
 * PIN9 Corresponde al HEARDBEAT (latidos del corazón) muestra atenuación y amplificación en la iluminación para indicar que Arduino nano esta en funcionamiento como ISP.
 * PIN8 Se iluminará en caso de error.
 * PIN7 Se ilumina en caso de estar activo el PMODE.
@@ -77,7 +81,7 @@ Los pines a usar de ATtiny88:
 
 En ATtiny88 solo usaremos 4 pines, excluyendo los indicadores, basicamente son los mismos que en nano a excepción del pin de RESET que estará conectado a SS de nano.
 Para ver las conexiones de mejor manera observe el siguente diagrama:
-![Diagrama de conexión Arduino nano como ISP con ATtiny88](img/nano_isp_attiny88.png)
+![Diagrama de conexión Arduino nano como ISP con ATtiny88](../img/nano_isp_attiny88.png)
 
 ## Imágenes del Montaje
 
