@@ -21,7 +21,7 @@ Antes de comenzar, asegúrate de tener los siguientes materiales a tu disposici�
 Para que arduino nano te permita cargar tus programas a ATtiny88 debes cargar un sketch que habilite esta opción.
 Para cargar el sketch dirigete a File>Examples>11.ArduinoISP>ArduinoISP
 
-![Ruta ubicación sketch ArduinoISP](img/arduinoISP.png)
+![Ruta ubicación sketch ArduinoISP](../img/arduinoISP.png)
 
 para cargar el programa siga los siguientes pasos:
 - Configurar la placa: Dirijase a Tools>Board>Arduino AVR Boards>Arduino nano.
