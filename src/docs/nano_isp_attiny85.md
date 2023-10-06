@@ -19,12 +19,12 @@ Sigue estos pasos para conectar tu Arduino Nano al ATtiny85:
 1. Conecta el Arduino Nano a tu computadora mediante un cable USB.
 2. Conecta los pines de la siguiente manera:
 
-   - Arduino Nano (Pin 10) a ATtiny85 (Pin 1 - Reset).
-   - Arduino Nano (Pin 11) a ATtiny85 (Pin 5 - MOSI).
-   - Arduino Nano (Pin 12) a ATtiny85 (Pin 6 - MISO).
-   - Arduino Nano (Pin 13) a ATtiny85 (Pin 7 - SCK).
-   - Arduino Nano (5V) a ATtiny85 (Pin 8 - VCC).
-   - Arduino Nano (GND) a ATtiny85 (Pin 4 - GND).
+|Arduino Nano | label | ATtiny85 | label |
+|PIN 10       | SS    | PIN 1    | RESET |
+|PIN 11       | MOSI  | PIN 5    | MOSI  |
+|PIN 12       | MISO  | PIN 6    | MISO  |
+|PIN 13       | SCK   | PIN 7    | SCK   |
+
 
 ![Conexiones](ruta_a_tu_imagen1.png)
 
