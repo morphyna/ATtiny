@@ -20,6 +20,7 @@ Sigue estos pasos para conectar tu Arduino Nano al ATtiny85:
 2. Conecta los pines de la siguiente manera:
 
 |Arduino Nano | label | ATtiny85 | label |
+|-------------|-------|----------|-------|
 |PIN 10       | SS    | PIN 1    | RESET |
 |PIN 11       | MOSI  | PIN 5    | MOSI  |
 |PIN 12       | MISO  | PIN 6    | MISO  |
