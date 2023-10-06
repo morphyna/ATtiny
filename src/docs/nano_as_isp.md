@@ -18,12 +18,12 @@ Antes de comenzar, asegúrate de tener los siguientes materiales a tu disposici�
 
 ## Preparando Arduino nano
 
-Para que arduino nano te permita cargar tus programas a ATtiny88 debes cargar un sketch que habilite esta opción.
+Para que arduino nano te permita cargar tus programas a ATtiny88 debes cargar un sketch que habilite esta funcionalidad.
 Para cargar el sketch dirigete a File>Examples>11.ArduinoISP>ArduinoISP
 
 ![Ruta ubicación sketch ArduinoISP](../img/arduinoISP.png)
 
-para cargar el programa siga los estos pasos:
+Para cargar el programa siga estos pasos:
 
 - Configurar la placa: Dirijase a Tools>Board>Arduino AVR Boards>Arduino nano.
 - Verifique el puerto: Conecte el arduino nano al computador por medio del calble USB y verifique que arduino nano aparece conectado a un puerto, por ejemplo COM3. Si no aparece conectado, seleccione el puerto en Tools>Port>COM##. En el caso que no lepermita seleccionar el puerto puede deberse a 2 factores:
@@ -48,13 +48,13 @@ Para realizar las conexinoes debemos ubicar unos los pines que cumplen la funci�
 - VCC
 - GND
 
-Las siguentes imagenes muestran donde están estos pines en Arduino nano y ATtiny88 respectivamente.
+Las siguientes imágenes muestran donde están estos pines en Arduino nano y ATtiny88 respectivamente.
 ![PinOUT Arduino nano](../img/nano328.png)
 ![PinOUT Arduino nanoATtiny88](../img/attiny88.jpg)
 
 ### Conexión del Arduino Nano como ISP
 
-Los piens a usar de nano serán los siguentes:
+Los pines a usar de Nano serán los siguientes:
 
 - PIN13-------SCK
 - PIN12-------MISO
@@ -79,25 +79,25 @@ Los pines a usar de ATtiny88:
 - PIN11-------MOSI
 - RESET-------RESET
 
-En ATtiny88 solo usaremos 4 pines, excluyendo los indicadores, basicamente son los mismos que en nano a excepción del pin de RESET que estará conectado a SS de nano.
+En ATtiny88 solo usaremos 4 pines, básicamente son los mismos que en Nano (si excluimos los indicadores) a excepción del pin de RESET que estará conectado a SS de nano.
 Para ver las conexiones de mejor manera observe el siguente diagrama:
 ![Diagrama de conexión Arduino nano como ISP con ATtiny88](../img/nano_isp_attiny88.png)
 
 ## Imágenes del Montaje
 
-![Monteje en protoboard](../img/montaje.png)
+![Montaje en protoboard](../img/montaje.png)
 El montaje en protoboard integra un dipswitch para facilitar conectar y desconectar el capacitor de 10uF.
 
 ## Cargar sketch en ATtiny88
 
-Luego de cargar el programa ArduinoISP en el Arduino Nano y realizar las conexiones indicadas, es hora de pasar a cargar el código en el ATtiny88. Pero antes de cargar nuestro sketch, debemos verificar que se encuentre instalado el gestor de placas para ATtiny. Existen muchas opciones, pero recomiendo usar ATtinyCore, que cuenta con soporte para la gran mayoría de las placas ATtiny.
+Luego de cargar el programa ArduinoISP en el Arduino Nano y realizar las conexiones indicadas,varias opciones, pero recomiendo usar ATtinyCore, que cuenta con soporte para la gran mayoría de las placas ATtiny.
 
-Dirigete a File>Preference>Additional boards nanager URLs y pega el siguente URL:
+Dirigete a File>Preference>Additional boards nanager URLs y pega el siguiente URL:
 
 - [Librerías de ATtinyCore](http://drazzy.com/package_drazzy.com_index.json)
 ![Librerías de ATtinyCore](../img/additional_URLs.png)
 
-Luego dirigete a Tools>Board>Boards manager y escribe ATtinyCore
+Luego dirigete a Tools>Board>Boards manager y escribe 'ATtinyCore'
 ![Librerías de ATtinyCore](../img/ATtinyCore.png)
 
 ## Subir el Sketch.
@@ -116,9 +116,9 @@ Para cargar el código ve a sketch>Upload Using Programmer
 A lo largo del proceso de programación, ten en cuenta las siguientes recomendaciones:
 
 1. Asegúrate de que todas las conexiones estén firmemente establecidas y sin cortocircuitos.
-2. Verifica la polaridad correcta del capacitor electrolítico (10uF).
+2. Verifica la polaridad correcta del condensador electrolítico (10uF). 
 3. Confirma que los pines de programación del ATtiny88 estén conectados según el diagrama.
-4. Usa Arduino IDE inferior a la versión 2.0
+4. Utiliza una versión de Arduino IDE anterior a la 2.0.
 
 ## Enlaces Útiles
 
