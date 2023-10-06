@@ -21,7 +21,7 @@ Antes de comenzar, asegúrate de tener los siguientes materiales a tu disposici�
 Para que arduino nano te permita cargar tus programas a ATtiny88 debes cargar un sketch que habilite esta opción.
 Para cargar el sketch dirigete a File>Examples>11.ArduinoISP>ArduinoISP
 
-![Ruta ubicación sketch ArduinoISP](/img/arduinoISP.png)
+![Ruta ubicación sketch ArduinoISP](/src/img/arduinoISP.png)
 
 para cargar el programa siga los estos pasos:
 
@@ -49,8 +49,8 @@ Para realizar las conexinoes debemos ubicar unos los pines que cumplen la funci�
 - GND
 
 Las siguentes imagenes muestran donde están estos pines en Arduino nano y ATtiny88 respectivamente.
-![PinOUT Arduino nano](/img/nano328.png)
-![PinOUT Arduino nanoATtiny88](/img/attiny88.jpg)
+![PinOUT Arduino nano](/src/img/nano328.png)
+![PinOUT Arduino nanoATtiny88](/src/img/attiny88.jpg)
 
 ### Conexión del Arduino Nano como ISP
 
@@ -81,11 +81,11 @@ Los pines a usar de ATtiny88:
 
 En ATtiny88 solo usaremos 4 pines, excluyendo los indicadores, basicamente son los mismos que en nano a excepción del pin de RESET que estará conectado a SS de nano.
 Para ver las conexiones de mejor manera observe el siguente diagrama:
-![Diagrama de conexión Arduino nano como ISP con ATtiny88](/img/nano_isp_attiny88.png)
+![Diagrama de conexión Arduino nano como ISP con ATtiny88](/src/img/nano_isp_attiny88.png)
 
 ## Imágenes del Montaje
 
-![Monteje en protoboard](/img/montaje.png)
+![Monteje en protoboard](/src/img/montaje.png)
 El montaje en protoboard integra un dipswitch para facilitar conectar y desconectar el capacitor de 10uF.
 
 ## Cargar sketch en ATtiny88
@@ -95,21 +95,21 @@ Luego de cargar el programa ArduinoISP en el Arduino Nano y realizar las conexio
 Dirigete a File>Preference>Additional boards nanager URLs y pega el siguente URL:
 
 - [Librerías de ATtinyCore](http://drazzy.com/package_drazzy.com_index.json)
-![Librerías de ATtinyCore](/img/additional_URLs.png)
+![Librerías de ATtinyCore](/src/img/additional_URLs.png)
 
 Luego dirigete a Tools>Board>Boards manager y escribe ATtinyCore
-![Librerías de ATtinyCore](/img/ATtinyCore.png)
+![Librerías de ATtinyCore](/src/img/ATtinyCore.png)
 
 ## Subir el Sketch.
 
 Ya están todos los preparativos, solo falta que escribas tu programa para subirlo, una vez lo tengas dirigete a Tools>Board>ATtinyCore>ATtiny88(Micronucleus...)
-![Selección de placa ATtinyCore](/img/selec_board.png)
+![Selección de placa ATtinyCore](/src/img/selec_board.png)
 
 Configura el programador como Arduino as ISP
-![Selección Arduino as ISP](/img/conf_board.png)
+![Selección Arduino as ISP](/src/img/conf_board.png)
 
 Para cargar el código ve a sketch>Upload Using Programmer
-![Selección Arduino as ISP](/img/upload.png)
+![Selección Arduino as ISP](/src/img/upload.png)
 
 ## Recomendaciones
 
