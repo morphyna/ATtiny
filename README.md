@@ -31,7 +31,7 @@ para cargar el programa siga los estos pasos:
     2. Compruebe que los driver de la placa esten instalados, en el caso de nano se requiere el driver para el ch340.
 
 - Cargue el programa pulsando el boton upload (laflecha a la derecha), al finalizar la carga solo debe quedar un led indicador encendido.
-
+ 
 ### Nota
 
 El programa debe cargarse sin conectar el Capacitor de 10uF entre Reset y GND, si el capacitor esta conectado Arduino IDE podría presentar un error al cargar el sketch.
@@ -94,7 +94,7 @@ Luego de cargar el programa ArduinoISP en el Arduino Nano y realizar las conexio
 
 Dirigete a File>Preference>Additional boards nanager URLs y pega el siguente URL:
 
-- [Librerías de ATtinyCore](http://drazzy.com/package_drazzy.com_index.json)
+- http://drazzy.com/package_drazzy.com_index.json
 ![Librerías de ATtinyCore](/src/img/additional_URLs.png)
 
 Luego dirigete a Tools>Board>Boards manager y escribe ATtinyCore
