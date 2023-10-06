@@ -38,7 +38,7 @@ El programa debe cargarse sin conectar el Capacitor de 10uF entre Reset y GND, s
 
 ## Diagramas de Conexión
 
-Para realizar las conexinoes debemos ubicar unos los pines que cumplen la función de comunicación UART.
+Para realizar las conexinoes debemos ubicar unos los pines que cumplen la función de comunicación SPI.
 
 - MISO
 - MOSI
@@ -85,27 +85,31 @@ Para ver las conexiones de mejor manera observe el siguente diagrama:
 
 ## Imágenes del Montaje
 
-Adjunta imágenes del montaje físico de los componentes siguiendo los diagramas de conexión mencionados anteriormente. Asegúrate de que las conexiones se vean claramente.
+![Monteje en protoboard](../img/montaje.png)
+El montaje en protoboard integra un dipswitch para facilitar conectar y desconectar el capacitor de 10uF.
 
-## Capturas del Procedimiento en Arduino IDE
+## Cargar sketch en ATtiny88
 
-A continuación, se proporcionan capturas de pantalla del procedimiento para programar ATtiny88 utilizando Arduino IDE como entorno de desarrollo.
+Luego de cargar el programa ArduinoISP en el Arduino Nano y realizar las conexiones indicadas, es hora de pasar a cargar el código en el ATtiny88. Pero antes de cargar nuestro sketch, debemos verificar que se encuentre instalado el gestor de placas para ATtiny. Existen muchas opciones, pero recomiendo usar ATtinyCore, que cuenta con soporte para la gran mayoría de las placas ATtiny.
 
-### Paso 1: Configuración de Arduino IDE
+Dirigete a File>Preference>Additional boards nanager URLs y pega el siguente URL:
 
-![Captura de Pantalla - Configuración de Arduino IDE](captura_arduino_ide_configuracion.png)
+- [Librerías de ATtinyCore](http://drazzy.com/package_drazzy.com_index.json)
+![Librerías de ATtinyCore](../img/additional_URLs.png)
 
-### Paso 2: Selección de la Placa ATtiny88
+Luego dirigete a Tools>Board>Boards manager y escribe ATtinyCore
+![Librerías de ATtinyCore](../img/ATtinyCore.png)
 
-![Captura de Pantalla - Selección de Placa ATtiny88](captura_arduino_ide_seleccion_placa.png)
+## Subir el Sketch.
 
-### Paso 3: Carga de Firmware en Arduino Nano
+Ya están todos los preparativos, solo falta que escribas tu programa para subirlo, una vez lo tengas dirigete a Tools>Board>ATtinyCore>ATtiny88(Micronucleus...)
+![Selección de placa ATtinyCore](../img/selec_board.png)
 
-![Captura de Pantalla - Carga de Firmware en Arduino Nano](captura_arduino_ide_carga_firmware.png)
+Configura el programador como Arduino as ISP
+![Selección Arduino as ISP](../img/conf_board.png)
 
-### Paso 4: Programación del ATtiny88
-
-![Captura de Pantalla - Programación del ATtiny88](captura_arduino_ide_programacion_attiny88.png)
+Para cargar el código ve a sketch>Upload Using Programmer
+![Selección Arduino as ISP](../img/upload.png)
 
 ## Recomendaciones
 
@@ -114,14 +118,15 @@ A lo largo del proceso de programación, ten en cuenta las siguientes recomendac
 1. Asegúrate de que todas las conexiones estén firmemente establecidas y sin cortocircuitos.
 2. Verifica la polaridad correcta del capacitor electrolítico (10uF).
 3. Confirma que los pines de programación del ATtiny88 estén conectados según el diagrama.
+4. Usa Arduino IDE inferior a la versión 2.0
 
 ## Enlaces Útiles
 
 Aquí tienes algunos enlaces útiles para continuar con este proyecto:
 
 - [Descargar Arduino IDE](https://www.arduino.cc/en/software)
-- [Librerías de ATtinyCore](https://github.com/SpenceKonde/ATTinyCore)
-- [Proyecto en GitHub (Inserta aquí el enlace a tu repositorio de GitHub)](https://github.com/tu-usuario/tu-proyecto)
+- [Librerías de ATtinyCore](http://drazzy.com/package_drazzy.com_index.json)
+- [Proyecto en GitHub](https://github.com/morphyna/ATtiny.git)
 
 ## Conclusiones
 
